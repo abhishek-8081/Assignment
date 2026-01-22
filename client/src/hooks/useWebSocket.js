@@ -7,7 +7,7 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { io } from 'socket.io-client';
 
-const SOCKET_SERVER_URL = 'http://localhost:3001';
+const SOCKET_SERVER_URL = 'https://assignment-l8h7.onrender.com';
 
 export function useWebSocket() {
     const socketRef = useRef(null);
