@@ -17,34 +17,8 @@ A Japanese Voice Travel Assistant chatbot built with React, Node.js, and WebSock
 
 ## High-Level Design (HLD)
 
-```mermaid
-flowchart TB
-    subgraph Client["Frontend (React)"]
-        UI[User Interface]
-        Voice[Voice Recognition]
-        WS_Client[WebSocket Client]
-    end
+<img width="3207" height="3194" alt="image" src="https://github.com/user-attachments/assets/534d124e-dc86-4121-87a5-dd8b7078da77" />
 
-    subgraph Server["Backend (Node.js)"]
-        WS_Server[WebSocket Server]
-        Weather_Handler[Weather Handler]
-        AI_Handler[AI Handler]
-    end
-
-    subgraph External["External APIs"]
-        OpenWeather[OpenWeatherMap API]
-        OpenAI[OpenAI ChatGPT API]
-    end
-
-    User((User)) --> UI
-    UI --> Voice
-    Voice --> WS_Client
-    WS_Client <-->|Socket.IO| WS_Server
-    WS_Server --> Weather_Handler
-    WS_Server --> AI_Handler
-    Weather_Handler --> OpenWeather
-    AI_Handler --> OpenAI
-```
 
 ### Data Flow
 1. User speaks in Japanese via browser microphone
