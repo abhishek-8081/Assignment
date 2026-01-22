@@ -33,38 +33,7 @@ A Japanese Voice Travel Assistant chatbot built with React, Node.js, and WebSock
 
 ## Low-Level Design (LLD)
 
-```mermaid
-flowchart LR
-    subgraph Frontend["Client (React + Vite)"]
-        App[App.jsx]
-        useWS[useWebSocket Hook]
-        useVR[useVoiceRecognition Hook]
-        Components[UI Components]
-    end
-
-    subgraph Backend["Server (Node.js + Express)"]
-        Index[index.js]
-        SocketIO[Socket.IO Server]
-        subgraph Handlers
-            GetWeather[get-weather event]
-            GetAI[get-ai-response event]
-        end
-    end
-
-    subgraph APIs["External Services"]
-        OWM[OpenWeatherMap]
-        GPT[OpenAI GPT-3.5]
-    end
-
-    App --> useWS
-    App --> useVR
-    App --> Components
-    useWS <-->|WebSocket| SocketIO
-    SocketIO --> GetWeather
-    SocketIO --> GetAI
-    GetWeather -->|HTTP GET| OWM
-    GetAI -->|HTTP POST| GPT
-```
+<img width="11950" height="2907" alt="image" src="https://github.com/user-attachments/assets/042fc685-331b-422f-a22c-37dae5844c2f" />
 
 ### Component Details
 
