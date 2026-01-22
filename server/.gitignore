@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Environment variables (IMPORTANT: contains API keys)
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
